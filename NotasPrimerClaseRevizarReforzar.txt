@@ -1,0 +1,86 @@
+html ok
+  formulario, tablas, div, h1, label, input: email, text, color, date
+css ok 
+  animaciones con css - no
+js ok 
+ variables, arreglos(map, foreach, for, filter, find, concat, slice ), json, objectos, scope,
+  condicionales if else while, 
+  var numero = 5
+  do{ 
+    //haga
+  }while(numero > 1){
+
+  } ,
+
+   var opc =  1;
+   if(opc == 1){
+     // call my function 
+   }
+
+   if(opc == 2){
+        // call my function 
+   }else{
+
+   }
+
+   if(opc == 3){
+        // call my function 
+   }else if(micondicion)
+
+   switch(opc){
+    case 1:
+    case 2:
+       // call my function  
+    break;
+
+    case 3:
+      // call my function  
+    break;
+
+    default:
+       consle.log("por favor ingrese una opción valida ...")
+
+   } 
+   funciones function, callback, => 
+   product = {
+       name: "jean"
+   }
+   console.log(JSON.stringify(product))
+   ,  no - stringify,
+   setInterval, setTime, promise, callback 
+
+   function callCod(){
+       //f1 =>(res,data, error ) =>f1 
+   }
+   sync y async multiples procesos a la vez, 
+
+   --
+   ---
+   ---
+   await ctrl.calculatePrice async(req, res){
+       const data = Product.find({ idproducto: req.body.idproduct}).limit().sort("-")
+       
+        //llamado 2
+   }
+jquery No
+   <input type="text" name="name" id="name" class="name">
+   //javascript
+   var name = document.getElementById("name").value();
+    <input type="button" class="btn-call" onclick="hola()">
+   
+   function hola(name){
+       console.log("Hola "+ name)
+   }
+   //jquery
+   $("#btn-call").clikc((e)=>{
+       var name = $("#name o .name").val()
+       console.log("Hola "+ name)
+       e.preventDefault()
+       return
+   })
+
+   $("#show").show("slow")
+   $("#hide").hide("slow")
+
+   consumos de api: ajax, fetch
+
