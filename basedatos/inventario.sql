@@ -82,7 +82,7 @@ UPDATE client SET document='111', name='gabimodificada'
 WHERE id = 1;
 
 DELETE FROM client WHERE id = 1; 
-
+TRUNCATE TABLE client;
 SELECT SUM(price) AS sumatoria FROM product;
 
 SELECT price, 0, null FROM product;

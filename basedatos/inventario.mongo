@@ -1,0 +1,75 @@
+/*crear db*/
+use inventario
+
+/*ver mis coleciones*/
+show collections
+
+db.createCollection('product')
+
+
+
+
+db.product.insertMany(
+ [
+    {
+        name: "papa3",
+        price: 1300,
+        status: true  
+    },
+     {
+        name: "papa4",
+        price: 1900,
+        status: true  
+    }
+ ]   
+)
+
+db.product.insertOne(
+    {
+        name: "arroba de arroz",
+        status: true, 
+        price: 20000,
+        enable: { type:Boolean, default: true}
+    },
+)
+
+db.product.INSERTONE(
+    {
+        name: "litro de aceite3",
+        status: true, 
+        price: 30000
+    },
+)
+
+db.product.find( { $or: 
+[ { status: { $lt: true } }, { price: 10 } ] } )
+
+db.product.find({ $or: [ { status: false } , { price: 10 } ] } )
+
+db.product.find()
+db.product.find().pretty()
+
+db.product.remove({ name : "litro de aceite" })
+db.product.remove({})
+
+db.product.drop()
+
+db.product.find({ name: 'papa3', price : 1300 }).pretty()
+
+db.product.find({ name: "papa3",  })
+
+
+db.product.update(
+    {
+        name: "litro de aceite",
+        status: true, 
+        price: 30000
+    },
+)
+
+
+db.product.update( 
+{  name: 'papa48', price: 1300},
+{
+  $set: { name: 'papa90' }
+});
