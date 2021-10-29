@@ -73,3 +73,44 @@ db.product.update(
 {
   $set: { name: 'papa90' }
 });
+
+db.createCollection('grades')
+
+db.grades.insertMany(
+   [
+      { "_id" : 1, name : "Alice King" , classAverage : 87.333333333333333 },
+      { "_id" : 2, name : "Bob Jenkins", classAverage : "83.52" },
+      { "_id" : 3, name : "Cathy Hart", classAverage: "94.06" },
+      { "_id" : 4, name : "Drew Williams" , classAverage : NumberInt("93") }
+   ]
+);
+
+db.grades.find().pretty()
+
+db.grades.find( { "classAverage" : { $type : [ "string" , "int" ] } } );
+
+db.createCollection('venta')
+
+db.venta.insertOne(
+{
+  total:3000,
+  status :{  type: Boolean , default: true },
+  product_ref : {
+                  "$ref" : "product",
+                  "$id" : ObjectId("617b435fdea5316530fa9845"),
+               }
+})
+
+db.venta.find({'product_ref.$id': ObjectId("617b435fdea5316530fa9845")})
+
+db.createCollection('products')
+
+try {
+   db.products.insertMany( [
+      { item: "card", qty: 15 },
+      { item: "envelope", qty: 20 },
+      { item: "stamps" , qty: 30 }
+   ] );
+} catch (e) {
+   print (e);
+}
