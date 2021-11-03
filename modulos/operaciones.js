@@ -21,15 +21,12 @@ function div(numberOne, numberTwo){
     return numberOne / numberTwo
 }
 
-/*
+
  module.exports = {
     suma, resta, multi, div, getPi
 }
-*/
 
-setInterval(() => {
-    
-}, interval);
+
 module.exports.suma=suma
 module.exports.resta=resta
 module.exports.multi=multi
