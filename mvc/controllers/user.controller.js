@@ -20,9 +20,16 @@ ctrlUser.create = async (req, res) => {
 
 ctrlUser.list = async (req, res) => {
   const users = await User.find();
-  console.log("users", users);
+  //console.log("users", users);
 
   res.json(users);
 };
+
+ctrlUser.delete = async (req,res) => {
+  console.log(req.params._id);
+  const {_id} = req.params ;
+  const users = await User.deleteOne({_id:_id});
+  res.json({status : true});
+}
 
 module.exports =  ctrlUser
