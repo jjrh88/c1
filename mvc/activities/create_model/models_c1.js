@@ -181,7 +181,18 @@ SANTIAGO HERRERA GOMEZ - perfiles
   created:
   update:,
 }
-GABRIELA FRANCO - habilidades{}
+GABRIELA FRANCO - habilidades{
+  created_at : 
+  hour : 
+  name :
+  description :
+  status:
+  created:
+  update:,
+  user_created
+})
+
+}
 SANTIAGO PRADO MEDINA - token 
 {
   key:"",
