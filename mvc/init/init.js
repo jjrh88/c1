@@ -1,4 +1,5 @@
-const user = require('../models/user')
+const user = require('../models/user'),
+roles = require('../models/roles')
 
 exports.createUser = function(){
    var newUser = new user({
@@ -32,3 +33,16 @@ exports.createUser = function(){
    newUser.save()
 }
 
+exports.createRole = function(){
+   var newRole = new roles({
+      role_id: 001,
+      role_name: "Administrador",
+      role_active_status: true,
+      role_modules:[ 
+        {
+            modules: "Inventory"
+        }
+      ],
+      
+   })
+}

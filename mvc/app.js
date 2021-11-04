@@ -12,6 +12,7 @@ init = require('./init/init')
 
 //jobs 
 //init.createUser()
+init.createRole()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
