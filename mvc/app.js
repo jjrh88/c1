@@ -12,7 +12,8 @@ init = require('./init/init')
 //jobs 
 //init.createUser()
 //<<<<<<< HEAD
-init.createRole()
+// init.createRole()
+// init.createInventory()
 //=======
 
 //init.createStudent()
