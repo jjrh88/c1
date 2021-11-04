@@ -15,7 +15,7 @@ init = require('./init/init')
 init.createRole()
 =======
 
-init.createStudent()
+//init.createStudent()
 
 >>>>>>> 31850c54168c42087c2fe8b73d77b82118116d3d
 app.use(bodyParser.urlencoded({ extended: false }))
