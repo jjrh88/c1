@@ -25,6 +25,12 @@ ctrlUser.list = async (req, res) => {
   res.json(users);
 };
 
+ctrlUser.enable = async (req, res) => {
+  const {_id, status} = req.body
+  await User.findOneAndUpdate({_id:_id}, {status:status})
+  res.json({status: true})
+}
+
 ctrlUser.delete = async (req,res) => {
   console.log(req.params._id);
   const {_id} = req.params ;
