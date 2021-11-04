@@ -1,9 +1,9 @@
 const user = require('../models/user'),
-<<<<<<< HEAD
+//<<<<<<< HEAD
 roles = require('../models/roles')
-=======
+//=======
 student = require('../models/student')
->>>>>>> 31850c54168c42087c2fe8b73d77b82118116d3d
+//>>>>>>> 31850c54168c42087c2fe8b73d77b82118116d3d
 
 
 exports.createStudent = function(){
