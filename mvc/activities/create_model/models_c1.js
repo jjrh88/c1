@@ -204,7 +204,7 @@ SANTIAGO ANDRÉS RAMÍREZ CASTILLO - estudiantes
  number_room:"A3-9",
   status:
   created:
-  update:
+  update: 
 
 }
 JULY PAOLA RODRÍGUEZ ANGARITA - docentes 

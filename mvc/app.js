@@ -9,9 +9,11 @@ init = require('./init/init')
 
 
 
-
 //jobs 
 //init.createUser()
+
+init.createStudent()
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
