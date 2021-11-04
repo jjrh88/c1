@@ -1,6 +1,51 @@
-const user = require('../models/user')
+const user = require('../models/user'),
+//<<<<<<< HEAD
+roles = require('../models/roles')
+//=======
+student = require('../models/student')
+//>>>>>>> 31850c54168c42087c2fe8b73d77b82118116d3d
 
-exports.createUser = function(){
+
+exports.createStudent = function(){
+   var newStudent = new student({
+      id: "816518152",
+      school_id: "894653132A",
+      name: "Jose Perez",
+      age: 12,
+      address: "calle 2 # 4-6",
+      tutor:[
+          {
+              priority: 1,
+              name: "Maria LOpEZ",
+              age: 41,
+              relationship: "MOther",
+              phone: 68598518,
+              address: "calle 2 # 4-6",
+          },
+          {
+              priority: 2,
+              name: "JOSE Perez",
+              age: 39,
+              relationship: "father",
+              phone: 98463198,
+              address: "calle 2 # 4-6",
+              status: true
+          }
+      ],
+      grade: 6,
+      classroom: "6B",
+      teacher: "Carolina arenas",
+      //start_date: "2002-11-5",
+      lunch_service: true
+      //created: "2002-11-2"
+   })
+   newStudent.save()
+}
+
+
+
+
+/*exports.createUser = function(){
    var newUser = new user({
     name: "JHONSITO",
     phone: "555555",
@@ -14,7 +59,7 @@ exports.createUser = function(){
     }
    })
 
-   //newUser.save()
+   newUser.save()
 
    var newUser = new user({
     name: "JORGE ALBERTO",
@@ -30,5 +75,18 @@ exports.createUser = function(){
    })
 
    newUser.save()
-}
+}*/
 
+exports.createRole = function(){
+   var newRole = new roles({
+      role_id: 001,
+      role_name: "Administrador",
+      role_active_status: true,
+      role_modules:[ 
+        {
+            modules: "Inventory"
+        }
+      ],
+      
+   })
+}
