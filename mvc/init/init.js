@@ -24,8 +24,7 @@ exports.createStudent = function(){
               age: 39,
               relationship: "father",
               phone: 98463198,
-              address: "calle 2 # 4-6",
-              status: true
+              address: "calle 2 # 4-6"
           }
       ],
       grade: 6,

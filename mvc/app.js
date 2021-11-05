@@ -14,6 +14,9 @@ init = require('./init/init')
 
 init.createStudent()
 
+//app.use(express.json({ limit: "10000mb" }));
+//app.use(express.urlencoded({ limit: "10000mb", extended: true }));
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
