@@ -38,4 +38,6 @@ ctrlUser.delete = async (req,res) => {
   res.json({status : true});
 }
 
+
+
 module.exports =  ctrlUser

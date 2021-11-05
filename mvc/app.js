@@ -11,8 +11,11 @@ init = require('./init/init')
 
 //jobs 
 //init.createUser()
+// init.createRole()
+// init.createInventory()
+//=======
 
-init.createStudent()
+//init.createStudent()
 
 //app.use(express.json({ limit: "10000mb" }));
 //app.use(express.urlencoded({ limit: "10000mb", extended: true }));
