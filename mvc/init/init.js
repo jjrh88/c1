@@ -92,7 +92,6 @@ inventory = require('../models/inventory')
 // }
 
 // exports.createInventory = function () {
-
 //    let newInventory = new inventory({
 //       category: {
 //          mainCategory: 'ferreteria',
