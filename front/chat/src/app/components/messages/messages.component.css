@@ -1,0 +1,19 @@
+.error-validation{
+    color:red;
+    border: solid 1px red;
+}
+
+.success-validation{
+    color:green;
+    border: solid 1px green;
+}
+
+.custom{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.cbtn{
+    margin-top: 5px;
+    margin-left: 10px;
+}
