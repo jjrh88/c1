@@ -110,7 +110,6 @@ exports.createDocentes = function(){
 // }
 
 // exports.createInventory = function () {
-
 //    let newInventory = new inventory({
 //       category: {
 //          mainCategory: 'ferreteria',

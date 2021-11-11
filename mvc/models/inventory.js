@@ -26,16 +26,8 @@ var InventorySchema = new mongoose.Schema({
     },
     minQuantity: { type: Number, required: true },
     availableQuantity: { type: Number, required: true },
-    created: { type: Date, required: true },
+    created: Date,
     updated: { type: Date, default: Date.now() }
 })
-
-// InventorySchema.pre('save', function (next) {
-//     console.log('doing something')
-//     const inventory = this
-//     console.log(inventory.name)
-//     //db[collection].find({name: inventory.name}).limit(1).size()
-
-// })
 
 module.exports = mongoose.model(collection, InventorySchema)
