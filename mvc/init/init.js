@@ -1,12 +1,8 @@
 const user = require('../models/user'),
-//<<<<<<< HEAD
-roles = require('../models/roles')
-//=======
-student = require('../models/student')
-//>>>>>>> 31850c54168c42087c2fe8b73d77b82118116d3d
+roles = require('../models/roles'),
+student = require('../models/student'),
 inventory = require('../models/inventory')
 
-<<<<<<< HEAD
 
 exports.createStudent = function(){
    var newStudent = new student({
@@ -42,7 +38,7 @@ exports.createStudent = function(){
    })
    newStudent.save()
 }
-=======
+// =======
 // exports.createStudent = function(){
 //    var newStudent = new student({
 //       id: "816518152",
@@ -78,7 +74,7 @@ exports.createStudent = function(){
 //    })
 //    newStudent.save()
 // }
->>>>>>> 8b37dd5c770bfaeee872a5a82f660e90dc173662
+// >>>>>>> 8b37dd5c770bfaeee872a5a82f660e90dc173662
 
 
 
