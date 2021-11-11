@@ -76,6 +76,27 @@ exports.createStudent = function(){
 // }
 // >>>>>>> 8b37dd5c770bfaeee872a5a82f660e90dc173662
 
+exports.createDocentes = function(){
+   var newDocentes = new docentes({
+      name: "JULY",
+      /*document: 1010101010,
+      specialist: [
+         {
+            name: "ING",
+            university: "UD"
+         }
+      ],
+      status: true,
+      cnt_mastery: "N/A",
+      cnt_specialization: "DOMOTICA",
+      age: 24,
+      nacionality: "COLOMBIANA",
+      experience_years: 5,
+      students_quantity: 20,*/
+   })
+   //newDocentes.save()
+   console.log(newDocentes)
+}
 
 
 
