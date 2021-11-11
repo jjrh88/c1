@@ -1,23 +1,19 @@
 const express = require('express'),
 app = express(),
 http = require('http').Server(app),
+io = require("socket.io")(http),
 bodyParser = require('body-parser'),
 cors = require('cors'),
 config = require('./config/config'),
-db = require("./database/database"),
-init = require('./init/init')
+consumer = require('../mvc/io/consumer')
+//db = require("./database/database"),
+//
 
+//init = require('./init/init')
 
+//init.createDocentes()
+consumer.start(io)
 
-//jobs 
-//init.createUser()
-//<<<<<<< HEAD
-init.createRole()
-//=======
-
-//init.createStudent()
-
-//>>>>>>> 31850c54168c42087c2fe8b73d77b82118116d3d
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
