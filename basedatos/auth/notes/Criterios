@@ -1,0 +1,9 @@
+->validaria cuantos registros tiene en  ->controlSessions
+  {
+    if(countSession > 1){
+     step one : Enviar un sms, email
+     step two : Cerrar la sessión del último dispositivo o del primero dispositivo en que se autentico
+     step three: Cerrar las sessiones de todos los dispositivos
+     step four: Dejar que el usuario decida cerrar todas las sessiones o escoje cual es la que desea cerrar
+    }
+  }

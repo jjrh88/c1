@@ -8,22 +8,27 @@ import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/fo
 })
 export class MessagesComponent implements OnInit {
 
+  public dateNow = new Date()
   public formMsg: FormGroup
   public message : AbstractControl //id name
   public document : AbstractControl
-  public submitted = false
+  public gender : AbstractControl
+  
+  public sub = false
+
 
   constructor(private formBuilder: FormBuilder) {
     this.formMsg = this.formBuilder.group(
       {
         message: ['', Validators.required ],
-        document: ['', Validators.required ]
+        document: ['', Validators.required ],
+        gender: ['', Validators.required ]
       }
     )
 
     this.message = this.formMsg.controls['message']
     this.document = this.formMsg.controls['document']
-
+    this.gender = this.formMsg.controls['gender']
    }
 
   ngOnInit(): void {
@@ -35,12 +40,12 @@ export class MessagesComponent implements OnInit {
 
   enviar(){
     console.log( this.formMsg.value )
-    this.submitted = true
+    this.sub = true
     if(this.formMsg.invalid)
       return
    
     //llamar servicio ....   
-    console.log("formulario valido ...")
+    ///console.log("formulario valido ...")
     
   }
 
