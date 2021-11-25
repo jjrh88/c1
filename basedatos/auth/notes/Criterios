@@ -7,3 +7,66 @@
      step four: Dejar que el usuario decida cerrar todas las sessiones o escoje cual es la que desea cerrar
     }
   }
+
+
+Jhon 1 token
+Javier obtiene el token de Jhon 
+1.
+  {
+    user:"", password:""
+  }
+  validar el usuario y si todo esta bien genera un token
+    save to session -> "session":{
+          "ip":"170.60.90.1",
+          "device":"Web",
+          "userID":"635236",
+          "continente":"Asia, America Latina, Norte America, Europa, Africa",
+          "country":"Colombia",
+          "os":"WIN"
+      } 
+2. 
+  Acceder a una vista, lo que haremos es validar si esta autentico
+    localhost:3000/api/auth/:token=eyJhbGc
+      si el token no ha expirado y si valido 
+       return true
+      sino{
+        return false
+        se sacar al usuario del sistema para que inicie session de nuevo.
+      } 
+
+
+3. Definición de roles y permisos
+   menu
+   {
+     "_id":"1",:"name":"usuarios", url:"/user", icon:"fa-user"
+   },
+   {
+     "_id":"2","name":"clientes", url:"/client", icon:"fa-client"
+   }
+   
+   {
+     "idusuario":1, 
+     "modules":[
+       { "_id":"1", "_id":"2" }
+     ], 
+   }
+
+
+
+
+   
+
+
+
+Angular
+ *Guards -> Proteger nuestras vistas => si un usuario no est autenticado no puede acceder a módulos del sistema 
+   *Mecanismo ->Service : llamar al endpoint que controla si el usuario esta autenticado.
+
+Nodejs ->
+   *Modelo(User, Session(para controlar el plagio de la session de un usuario))
+   *Controlador AuthController
+      ->Jwt: Json Web Token, expiracion
+   *init/Creacion de datos dummy - de pruebas
+   *Route/index -> auth.route
+   *Serivice/mail.js
+       

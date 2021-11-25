@@ -1,0 +1,43 @@
+<section class="section">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+          <div class="login-brand">
+            Login Test
+          </div>
+
+          <div class="card card-primary">
+           
+           <div class="card-body">
+              <form  [formGroup]="formL" class="needs-validation" novalidate>
+                <div class="form-group">
+                  <label>Usuario</label>
+                  <input type="text" 
+                  [ngClass]="{ 'error-validation': submitted && f['user'].errors, 'success-validation':user.valid && (user.dirty || user.touched) }"
+                  class="form-control" formControlName="user">
+                </div>
+
+                <div class="form-group">
+                  
+                  <label>Contraseña</label>
+                  <input type="password" 
+                  [ngClass]="{ 'error-validation': submitted && f['password'].errors, 'success-validation':password.valid && (password.dirty || password.touched) }"
+                   class="form-control" formControlName="password">
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" (click)="login()" class="btn btn-primary btn-lg btn-block">
+                    Entrar
+                    <div *ngIf="showLoader" class="spinner-border text-light" role="status">
+                      <span class="visually-hidden"></span>
+                    </div>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>

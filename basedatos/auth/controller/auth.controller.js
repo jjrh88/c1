@@ -18,7 +18,7 @@ async function signIn(req, res)
                 if(err) return next(err)
                 bcrypt.compare(req.body.password, user.password , function(err, isMatch) 
                 {
-                    if(isMatch)
+                    if(isMatch) //true
                     {
                         jwt.sign({ user }, config.SECRET_TOKEN , { expiresIn: '30s' }, (err, token) =>{
                           if(err)
@@ -45,15 +45,16 @@ async function signIn(req, res)
 async function isLogged(req, res, next)
 {
   if(req.params.token){
-    jwt.verify(req.params.token, config.SECRET_TOKEN, (err, authData) =>{
+    jwt.verify(req.params.token, config.SECRET_TOKEN, (err, data) =>{
       if(err){
-        res.sendStatus(403);
+        res.json({ status : false })
+        //res.sendStatus(403);
       }
       else{
           res.json({
               status : true,
               msg: "Te has logueado..", 
-              authData
+              data
           });
           res.json({ status : true })
       }
